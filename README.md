@@ -85,8 +85,71 @@ __Outputs__
 - _Found_ 1 found the row; else 0.
 - _Error_ is true if an error was encoutered; else false.
 - _Error message_ contains the error message if an error was encountered.
-- Excel Find Cells
 
 ## JSON Action Utilities
 
-- 
+### JSON Set Value
+
+__About__ Inserts or updates a key value in a JSON structure.
+
+__Inputs__
+- _JSON_ the JSON object.
+- _Path_ a a period delimited string that provides the path where to add the key and value.
+- _Key_ is the string key to insert or update.
+- _Value_ is the string value of the key.
+- _Value type_ re-casts the value to the proper JSON datatype. 
+- _Log_ is a toggle to add a log entry of the resulting outputs.
+
+__Outputs__
+- _JSON_ the new JSON object with the added key and value.
+- _Error_ is true if an error was encoutered; else false.
+- _Error message_ contains the error message if an error was encountered.
+
+### JSON Get Values
+
+__About__ Retrieves all of the JSON structure values that match the key.
+
+__Inputs__
+- _JSON_ the JSON object.
+- _Key_ to search for.
+- _Regex_ is a toggle stating that they Key provided is a regex pattern.
+- _Regex flags_ see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp 
+- _Depth_ is JSON structure depth to traverse. Default is 0 meaning traverse the entire structure.
+- _Log_ is a toggle to add a log entry of the resulting outputs.
+
+__Outputs__
+- _Values_ as an array of strings holding all of the values found.
+- _Error_ is true if an error was encoutered; else false.
+- _Error message_ contains the error message if an error was encountered.
+
+
+### JSON Get Value
+
+__About__ Retrieve specific JSON value that match the key.
+
+__Inputs__
+- _JSON_ the JSON object.
+- _Key path_ is a period delimited string to the key within the JSON object to retrieve the value.
+- _Log_ is a toggle to add a log entry of the resulting outputs.
+
+__Outputs__
+- _Value_ the string represenation of the value.
+- _Value type_ the typeof the value; note that object is changed to either array or json to distinguish both.
+- _Found_ is true if the value was found; else, false.
+- _Error_ is true if an error was encoutered; else false.
+- _Error message_ contains the error message if an error was encountered.
+
+### JSON Get Keys
+
+__About__ Retrieves all of the JSON structure keys.
+
+__Inputs__
+- _JSON_ the JSON object.
+- _Depth_ is JSON structure depth to traverse. Default is 0 meaning traverse the entire structure.
+- _Log_ is a toggle to add a log entry of the resulting outputs.
+
+__Outputs__
+- _Keys_ as an array of strings holding all of the keys found.
+- _Key paths_ as an array of strings holding all of period delimited key strings found.
+- _Error_ is true if an error was encoutered; else false.
+- _Error message_ contains the error message if an error was encountered.
