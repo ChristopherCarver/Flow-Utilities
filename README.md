@@ -153,3 +153,18 @@ __Outputs__
 - _Key paths_ as an array of strings holding all of period delimited key strings found.
 - _Error_ is true if an error was encoutered; else false.
 - _Error message_ contains the error message if an error was encountered.
+
+### JSON to XML
+
+__About__ Converts JSON to XML.
+
+__Inputs__
+- _JSON_ the JSON object.
+- _Log_ is a toggle to add a log entry of the resulting outputs.
+
+__Outputs__
+- _XML_ a XML as a XMLDocument2 string.
+- __XML_ a XML string.
+- _Error_ is true if an error was encoutered; else false.
+- _Error message_ contains the error message if an error was encountered.
+
